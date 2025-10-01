@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@400;600;700&family=Roboto:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-blue: #0A2540;
+  --emerald-green: #1DB954;
+  --gold-yellow: #FFC300;
+  --light-gray: #F5F5F5;
+  --dark-gray: #666666;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--light-gray);
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-navy {
+  color: var(--navy-blue);
+}
+
+.text-emerald {
+  color: var(--emerald-green);
+}
+
+.text-gold {
+  color: var(--gold-yellow);
+}
+
+.bg-navy {
+  background-color: var(--navy-blue);
+}
+
+.bg-emerald {
+  background-color: var(--emerald-green);
+}
+
+.bg-gold {
+  background-color: var(--gold-yellow);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.asphalt-texture {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px, 60px 60px, 40px 40px;
+}
+
+.highlight-box {
+  border-left: 4px solid var(--emerald-green);
+  background: linear-gradient(135deg, rgba(29, 185, 84, 0.1) 0%, rgba(29, 185, 84, 0.05) 100%);
+}
+
+.warning-box {
+  border-left: 4px solid var(--gold-yellow);
+  background: linear-gradient(135deg, rgba(255, 195, 0, 0.1) 0%, rgba(255, 195, 0, 0.05) 100%);
+}
+
+.security-box {
+  border-left: 4px solid var(--navy-blue);
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.1) 0%, rgba(10, 37, 64, 0.05) 100%);
+}
+
+.expert-box {
+  border: 2px solid var(--emerald-green);
+  background: linear-gradient(135deg, rgba(29, 185, 84, 0.05) 0%, rgba(29, 185, 84, 0.02) 100%);
+}
+
+.chapter-section {
+  scroll-margin-top: 2rem;
+  padding-bottom: 8rem; /* Add padding to avoid content being hidden by navigation */
+}
+
+.smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+.smooth-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.smooth-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.smooth-scroll::-webkit-scrollbar-thumb {
+  background: var(--navy-blue);
+  border-radius: 10px;
+}
+
+.smooth-scroll::-webkit-scrollbar-thumb:hover {
+  background: #071f36;
+}
+
+@media print {
+  .chapter-section {
+    page-break-inside: avoid;
+  }
+}
